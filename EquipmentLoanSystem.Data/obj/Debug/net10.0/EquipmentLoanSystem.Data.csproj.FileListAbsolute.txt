@@ -13,3 +13,4 @@ C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\obj\D
 C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\obj\Debug\net10.0\refint\EquipmentLoanSystem.Data.dll
 C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\obj\Debug\net10.0\EquipmentLoanSystem.Data.pdb
 C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\obj\Debug\net10.0\ref\EquipmentLoanSystem.Data.dll
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\obj\Debug\net10.0\EquipmentLoanSystem.Data.sourcelink.json

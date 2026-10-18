@@ -15,3 +15,4 @@ C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Service\ob
 C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Service\obj\Debug\net10.0\refint\EquipmentLoanSystem.Service.dll
 C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Service\obj\Debug\net10.0\EquipmentLoanSystem.Service.pdb
 C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Service\obj\Debug\net10.0\ref\EquipmentLoanSystem.Service.dll
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Service\obj\Debug\net10.0\EquipmentLoanSystem.Service.sourcelink.json

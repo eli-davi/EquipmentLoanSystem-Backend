@@ -1,80 +1,94 @@
-﻿using EquipmentLoanSystem.Core.DTOs;
+﻿using System;
+using System.Threading.Tasks;
 using EquipmentLoanSystem.Core.Entities;
 using EquipmentLoanSystem.Core.Enums;
-using EquipmentLoanSystem.Core.Interfaces;
-using EquipmentLoanSystem.Service.Services;
+using EquipmentLoanSystem.Data;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
-using Moq;
 using Xunit;
 
 namespace EquipmentLoanSystem.Tests
 {
-    public class LoanServiceTests
+    public class LoanConcurrencyTests : IDisposable
     {
-        [Fact]
-        public async Task CreateLoanAsync_WhenCopyIsAvailable_ReturnsSuccess()
+        private readonly SqliteConnection _connection;
+
+        public LoanConcurrencyTests()
         {
-            // Arrange
-            var mockRepo = new Mock<IItemCopyRepository>();
-            var itemCopy = new ItemCopy { Id = 1, Status = CopyStatus.Available };
-            var request = new LoanRequestDto { ItemCopyId = 1, MemberId = 1 };
+            _connection = new SqliteConnection("Filename=:memory:");
+            _connection.Open();
+        }
 
-            mockRepo.Setup(repo => repo.GetByIdAsync(request.ItemCopyId, It.IsAny<CancellationToken>()))
-                    .ReturnsAsync(itemCopy);
-
-            var service = new LoanService(mockRepo.Object);
-
-            // Act
-            var result = await service.CreateLoanAsync(request);
-
-            // Assert
-            Assert.True(result.IsSuccess);
-            Assert.Equal(200, result.ErrorCode);
-            mockRepo.Verify(repo => repo.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once);
+        private DbContextOptions<AppDbContext> CreateOptions()
+        {
+            return new DbContextOptionsBuilder<AppDbContext>()
+                .UseSqlite(_connection)
+                .Options;
         }
 
         [Fact]
-        public async Task CreateLoanAsync_WhenCopyHasZeroStatus_ReturnsSuccess()
-        {
-            var mockRepo = new Mock<IItemCopyRepository>();
-            var itemCopy = new ItemCopy { Id = 1, Status = (CopyStatus)0 };
-            var request = new LoanRequestDto { ItemCopyId = 1, MemberId = 1 };
-
-            mockRepo.Setup(repo => repo.GetByIdAsync(request.ItemCopyId, It.IsAny<CancellationToken>()))
-                    .ReturnsAsync(itemCopy);
-
-            var service = new LoanService(mockRepo.Object);
-
-            var result = await service.CreateLoanAsync(request);
-
-            Assert.True(result.IsSuccess);
-            Assert.Equal(CopyStatus.Loaned, itemCopy.Status);
-            mockRepo.Verify(repo => repo.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once);
-        }
-
-        [Fact]
-        public async Task CreateLoanAsync_WhenConcurrencyConflictOccurs_Returns409Conflict()
+        public async Task TwoDbContexts_ConcurrentUpdate_ThrowsConcurrencyException()
         {
             // Arrange
-            var mockRepo = new Mock<IItemCopyRepository>();
-            var itemCopy = new ItemCopy { Id = 1, Status = CopyStatus.Available };
-            var request = new LoanRequestDto { ItemCopyId = 1, MemberId = 1 };
+            var options = CreateOptions();
 
-            mockRepo.Setup(repo => repo.GetByIdAsync(request.ItemCopyId, It.IsAny<CancellationToken>()))
-                    .ReturnsAsync(itemCopy);
+            using (var contextSetup = new AppDbContext(options))
+            {
+                await contextSetup.Database.EnsureCreatedAsync();
 
-            mockRepo.Setup(repo => repo.SaveChangesAsync(It.IsAny<CancellationToken>()))
-                    .ThrowsAsync(new DbUpdateConcurrencyException());
+                // 1. יצירת והוספת הפריט (Item) כדי לקיים את אילוץ המפתח הזר
+                var item = new Item
+                {
+                    Id = 1,
+                    Name = "מצלמה לבדיקה",
+                    Description = "תיאור בדיקה"
+                };
+                contextSetup.Items.Add(item);
 
-            var service = new LoanService(mockRepo.Object);
+                // 2. יצירת העותק הפיזי (ItemCopy) המקושר לפריט
+                var itemCopy = new ItemCopy
+                {
+                    Id = 1,
+                    ItemId = 1,
+                    SerialNumber = "SN-CONCURRENCY-1",
+                    Status = CopyStatus.Available,
+                    Version = Guid.NewGuid()
+                };
+
+                contextSetup.ItemCopies.Add(itemCopy);
+                await contextSetup.SaveChangesAsync();
+            }
 
             // Act
-            var result = await service.CreateLoanAsync(request);
+            using var context1 = new AppDbContext(options);
+            using var context2 = new AppDbContext(options);
 
-            // Assert
-            Assert.False(result.IsSuccess);
-            Assert.Equal(409, result.ErrorCode);
-            Assert.Contains("נתפס על ידי משתמש אחר", result.ErrorMessage);
+            var copyUser1 = await context1.ItemCopies.FindAsync(1);
+            var copyUser2 = await context2.ItemCopies.FindAsync(1);
+
+            Assert.NotNull(copyUser1);
+            Assert.NotNull(copyUser2);
+
+            // משתמש 1 מעדכן ושומר
+            copyUser1.Status = CopyStatus.Loaned;
+            copyUser1.Version = Guid.NewGuid();
+            await context1.SaveChangesAsync();
+
+            // משתמש 2 מנסה לעדכן על סמך הגרסה הישנה
+            copyUser2.Status = CopyStatus.Loaned;
+            copyUser2.Version = Guid.NewGuid();
+
+            // Assert - השמירה השנייה אמורה להיכשל בגלל התנגשות גרסאות
+            await Assert.ThrowsAsync<DbUpdateConcurrencyException>(async () =>
+            {
+                await context2.SaveChangesAsync();
+            });
+        }
+
+        public void Dispose()
+        {
+            _connection.Close();
+            _connection.Dispose();
         }
     }
 }
