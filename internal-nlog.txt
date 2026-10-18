@@ -1,0 +1,3 @@
+2026-10-14 15:45:10.6445 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-14 15:45:10.6989 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.1.5860. Product version: 6.2.1+b058028290f245d12c30cb2910c2a574558ed9c6. GlobalAssemblyCache: False
+2026-10-14 15:45:10.8462 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\nlog.config

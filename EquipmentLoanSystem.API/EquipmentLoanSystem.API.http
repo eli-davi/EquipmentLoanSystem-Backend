@@ -1,0 +1,14 @@
+@EquipmentLoanSystem.API_HostAddress = http://localhost:5206
+
+GET {{EquipmentLoanSystem.API_HostAddress}}/api/items
+Accept: application/json
+
+###
+
+POST {{EquipmentLoanSystem.API_HostAddress}}/api/loans
+Content-Type: application/json
+
+{
+  "itemCopyId": 1,
+  "memberId": 1
+}

@@ -1,0 +1,207 @@
+2026-10-16 10:07:31.5003|INFO|Microsoft.EntityFrameworkCore.Database.Command|CorrelationId: |Executed DbCommand (90ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2026-10-16 10:07:31.5406|INFO|Microsoft.EntityFrameworkCore.Migrations|CorrelationId: |Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long. 
+2026-10-16 10:07:31.6566|INFO|Microsoft.EntityFrameworkCore.Database.Command|CorrelationId: |Executed DbCommand (112ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result 
+2026-10-16 10:07:31.7814|INFO|Microsoft.EntityFrameworkCore.Database.Command|CorrelationId: |Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END; 
+2026-10-16 10:07:31.7918|INFO|Microsoft.EntityFrameworkCore.Database.Command|CorrelationId: |Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2026-10-16 10:07:31.7918|INFO|Microsoft.EntityFrameworkCore.Database.Command|CorrelationId: |Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2026-10-16 10:07:32.0264|INFO|Microsoft.EntityFrameworkCore.Database.Command|CorrelationId: |Executed DbCommand (231ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2026-10-16 10:07:32.0320|INFO|Microsoft.EntityFrameworkCore.Migrations|CorrelationId: |No migrations were applied. The database is already up to date. 
+2026-10-16 10:07:32.0320|INFO|Microsoft.EntityFrameworkCore.Database.Command|CorrelationId: |Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result 
+2026-10-16 10:07:32.4042|INFO|Microsoft.EntityFrameworkCore.Database.Command|CorrelationId: |Executed DbCommand (60ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Items] AS [i]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2026-10-16 10:07:32.4871|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Now listening on: http://localhost:5206 
+2026-10-16 10:07:32.4871|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Application started. Press Ctrl+C to shut down. 
+2026-10-16 10:07:32.4871|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Hosting environment: Development 
+2026-10-16 10:07:32.4871|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Content root path: C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.API 
+2026-10-16 10:10:10.1947|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Application is shutting down... 
+2026-10-16 10:12:11.3877|INFO|Microsoft.EntityFrameworkCore.Database.Command|CorrelationId: |Executed DbCommand (199ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2026-10-16 10:12:11.7144|INFO|Microsoft.EntityFrameworkCore.Migrations|CorrelationId: |Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long. 
+2026-10-16 10:12:12.0071|INFO|Microsoft.EntityFrameworkCore.Database.Command|CorrelationId: |Executed DbCommand (278ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result 
+2026-10-16 10:12:12.8025|INFO|Microsoft.EntityFrameworkCore.Database.Command|CorrelationId: |Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END; 
+2026-10-16 10:12:12.8995|INFO|Microsoft.EntityFrameworkCore.Database.Command|CorrelationId: |Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2026-10-16 10:12:12.9088|INFO|Microsoft.EntityFrameworkCore.Database.Command|CorrelationId: |Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2026-10-16 10:12:12.9877|INFO|Microsoft.EntityFrameworkCore.Database.Command|CorrelationId: |Executed DbCommand (63ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2026-10-16 10:12:13.0379|INFO|Microsoft.EntityFrameworkCore.Migrations|CorrelationId: |No migrations were applied. The database is already up to date. 
+2026-10-16 10:12:13.0553|INFO|Microsoft.EntityFrameworkCore.Database.Command|CorrelationId: |Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result 
+2026-10-16 10:12:15.1969|INFO|Microsoft.EntityFrameworkCore.Database.Command|CorrelationId: |Executed DbCommand (45ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Items] AS [i]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2026-10-16 10:12:16.0455|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Now listening on: http://localhost:5206 
+2026-10-16 10:12:16.1101|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Application started. Press Ctrl+C to shut down. 
+2026-10-16 10:12:16.1101|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Hosting environment: Development 
+2026-10-16 10:12:16.1101|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Content root path: C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.API 
+2026-10-16 10:16:44.8155|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Application is shutting down... 
+2026-10-16 10:18:23.0369|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Now listening on: http://localhost:5206 
+2026-10-16 10:18:23.1354|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Application started. Press Ctrl+C to shut down. 
+2026-10-16 10:18:23.1410|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Hosting environment: Development 
+2026-10-16 10:18:23.1410|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Content root path: C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.API 
+2026-10-16 10:22:18.0200|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Application is shutting down... 
+2026-10-16 10:26:14.2721|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Now listening on: http://localhost:5206 
+2026-10-16 10:26:14.3050|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Application started. Press Ctrl+C to shut down. 
+2026-10-16 10:26:14.3050|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Hosting environment: Development 
+2026-10-16 10:26:14.3050|INFO|Microsoft.Hosting.Lifetime|CorrelationId: |Content root path: C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.API 
+2026-10-16 16:16:14.5458|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (174ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 |url: |action: 
+2026-10-16 16:16:14.7938|0|INFO|Microsoft.EntityFrameworkCore.Migrations|Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long. |url: |action: 
+2026-10-16 16:16:14.9819|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (157ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result |url: |action: 
+2026-10-16 16:16:15.3501|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (53ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END; |url: |action: 
+2026-10-16 16:16:15.4226|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 |url: |action: 
+2026-10-16 16:16:15.4226|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); |url: |action: 
+2026-10-16 16:16:15.4987|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (66ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; |url: |action: 
+2026-10-16 16:16:15.5256|0|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date. |url: |action: 
+2026-10-16 16:16:15.5383|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result |url: |action: 
+2026-10-16 16:16:16.7643|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (57ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Items] AS [i]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END |url: |action: 
+2026-10-16 16:16:17.1388|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5206 |url: |action: 
+2026-10-16 16:16:17.1480|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-10-16 16:16:17.1480|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-10-16 16:16:17.1480|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.API |url: |action: 
+2026-10-16 16:28:06.7917|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: 
+2026-10-16 16:35:12.8166|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 |url: |action: 
+2026-10-16 16:35:12.8933|0|INFO|Microsoft.EntityFrameworkCore.Migrations|Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long. |url: |action: 
+2026-10-16 16:35:13.0315|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (134ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result |url: |action: 
+2026-10-16 16:35:13.2233|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (60ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END; |url: |action: 
+2026-10-16 16:35:13.2371|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 |url: |action: 
+2026-10-16 16:35:13.2371|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); |url: |action: 
+2026-10-16 16:35:13.3677|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (123ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; |url: |action: 
+2026-10-16 16:35:13.3781|0|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date. |url: |action: 
+2026-10-16 16:35:13.3781|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result |url: |action: 
+2026-10-16 16:35:13.8098|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Items] AS [i]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END |url: |action: 
+2026-10-16 16:35:13.9892|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5206 |url: |action: 
+2026-10-16 16:35:14.0012|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-10-16 16:35:14.0012|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-10-16 16:35:14.0012|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.API |url: |action: 
+2026-10-16 16:37:37.1541|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: 
+2026-10-16 16:37:57.4390|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (118ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 |url: |action: 
+2026-10-16 16:37:57.6915|0|INFO|Microsoft.EntityFrameworkCore.Migrations|Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long. |url: |action: 
+2026-10-16 16:37:57.7906|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (78ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result |url: |action: 
+2026-10-16 16:37:58.2972|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END; |url: |action: 
+2026-10-16 16:37:58.3474|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 |url: |action: 
+2026-10-16 16:37:58.3474|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); |url: |action: 
+2026-10-16 16:37:58.4000|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; |url: |action: 
+2026-10-16 16:37:58.4247|0|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date. |url: |action: 
+2026-10-16 16:37:58.4247|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result |url: |action: 
+2026-10-16 16:38:14.2138|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5206 |url: |action: 
+2026-10-16 16:38:14.2395|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-10-16 16:38:14.2395|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-10-16 16:38:14.2395|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.API |url: |action: 
+2026-10-16 16:40:11.2378|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: 

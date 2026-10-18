@@ -1,0 +1,174 @@
+2026-10-14 15:31:07.9129 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-14 15:31:07.9477 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.1.5860. Product version: 6.2.1+b058028290f245d12c30cb2910c2a574558ed9c6. GlobalAssemblyCache: False
+2026-10-14 15:31:08.0539 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\nlog.config
+2026-10-14 15:38:53.9764 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-14 15:38:54.0526 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.1.5860. Product version: 6.2.1+b058028290f245d12c30cb2910c2a574558ed9c6. GlobalAssemblyCache: False
+2026-10-14 15:38:54.6398 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\nlog.config
+2026-10-14 15:41:20.2974 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-14 15:41:20.3224 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.1.5860. Product version: 6.2.1+b058028290f245d12c30cb2910c2a574558ed9c6. GlobalAssemblyCache: False
+2026-10-14 15:41:20.3843 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\nlog.config
+2026-10-14 15:41:37.7669 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-14 15:41:37.8043 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.1.5860. Product version: 6.2.1+b058028290f245d12c30cb2910c2a574558ed9c6. GlobalAssemblyCache: False
+2026-10-14 15:41:37.8871 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\nlog.config
+2026-10-14 15:45:18.8165 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-14 15:45:18.9382 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.1.5860. Product version: 6.2.1+b058028290f245d12c30cb2910c2a574558ed9c6. GlobalAssemblyCache: False
+2026-10-14 15:45:19.3127 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\nlog.config
+2026-10-14 15:45:36.9082 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-14 15:45:36.9469 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.1.5860. Product version: 6.2.1+b058028290f245d12c30cb2910c2a574558ed9c6. GlobalAssemblyCache: False
+2026-10-14 15:45:37.0484 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\nlog.config
+2026-10-14 15:45:39.5273 Error FileTarget(Name=allfile): Failed writing to FileName: 'logs/nlog-all-2026-10-14.log' Exception: System.IO.IOException: The process cannot access the file 'C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\logs\nlog-all-2026-10-14.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Targets.FileTarget.CreateFileStream(String filePath, Int32 bufferSize)
+   at NLog.Targets.FileTarget.OpenNewFileStream(String filePath, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileTarget.CreateFileStreamWithDirectory(String filePath, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileTarget.CreateFileStreamWithRetry(IFileAppender fileAppender, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileAppenders.ExclusiveFileLockingAppender..ctor(FileTarget fileTarget, String filePath)
+   at NLog.Targets.FileTarget.CreateFileAppender(String filePath)
+   at NLog.Targets.FileTarget.OpenFile(String filename, LogEventInfo firstLogEvent, Nullable`1 previousFileLastModified, Int32 sequenceNumber)
+   at NLog.Targets.FileTarget.WriteBytesToFile(String filename, LogEventInfo firstLogEvent, MemoryStream ms)
+   at NLog.Targets.FileTarget.Write(LogEventInfo logEvent)
+2026-10-14 15:45:39.7358 Error FileTarget(Name=allfile): Failed writing to FileName: 'logs/nlog-all-2026-10-14.log' Exception: System.IO.IOException: The process cannot access the file 'C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\logs\nlog-all-2026-10-14.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Targets.FileTarget.CreateFileStream(String filePath, Int32 bufferSize)
+   at NLog.Targets.FileTarget.OpenNewFileStream(String filePath, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileTarget.CreateFileStreamWithDirectory(String filePath, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileTarget.CreateFileStreamWithRetry(IFileAppender fileAppender, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileAppenders.ExclusiveFileLockingAppender..ctor(FileTarget fileTarget, String filePath)
+   at NLog.Targets.FileTarget.CreateFileAppender(String filePath)
+   at NLog.Targets.FileTarget.OpenFile(String filename, LogEventInfo firstLogEvent, Nullable`1 previousFileLastModified, Int32 sequenceNumber)
+   at NLog.Targets.FileTarget.WriteBytesToFile(String filename, LogEventInfo firstLogEvent, MemoryStream ms)
+   at NLog.Targets.FileTarget.Write(LogEventInfo logEvent)
+2026-10-14 15:45:40.2030 Error FileTarget(Name=allfile): Failed writing to FileName: 'logs/nlog-all-2026-10-14.log' Exception: System.IO.IOException: The process cannot access the file 'C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\logs\nlog-all-2026-10-14.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Targets.FileTarget.CreateFileStream(String filePath, Int32 bufferSize)
+   at NLog.Targets.FileTarget.OpenNewFileStream(String filePath, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileTarget.CreateFileStreamWithDirectory(String filePath, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileTarget.CreateFileStreamWithRetry(IFileAppender fileAppender, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileAppenders.ExclusiveFileLockingAppender..ctor(FileTarget fileTarget, String filePath)
+   at NLog.Targets.FileTarget.CreateFileAppender(String filePath)
+   at NLog.Targets.FileTarget.OpenFile(String filename, LogEventInfo firstLogEvent, Nullable`1 previousFileLastModified, Int32 sequenceNumber)
+   at NLog.Targets.FileTarget.WriteBytesToFile(String filename, LogEventInfo firstLogEvent, MemoryStream ms)
+   at NLog.Targets.FileTarget.Write(LogEventInfo logEvent)
+2026-10-14 15:45:40.2453 Error FileTarget(Name=allfile): Failed writing to FileName: 'logs/nlog-all-2026-10-14.log' Exception: System.IO.IOException: The process cannot access the file 'C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\logs\nlog-all-2026-10-14.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Targets.FileTarget.CreateFileStream(String filePath, Int32 bufferSize)
+   at NLog.Targets.FileTarget.OpenNewFileStream(String filePath, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileTarget.CreateFileStreamWithDirectory(String filePath, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileTarget.CreateFileStreamWithRetry(IFileAppender fileAppender, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileAppenders.ExclusiveFileLockingAppender..ctor(FileTarget fileTarget, String filePath)
+   at NLog.Targets.FileTarget.CreateFileAppender(String filePath)
+   at NLog.Targets.FileTarget.OpenFile(String filename, LogEventInfo firstLogEvent, Nullable`1 previousFileLastModified, Int32 sequenceNumber)
+   at NLog.Targets.FileTarget.WriteBytesToFile(String filename, LogEventInfo firstLogEvent, MemoryStream ms)
+   at NLog.Targets.FileTarget.Write(LogEventInfo logEvent)
+2026-10-14 15:45:40.4357 Error FileTarget(Name=allfile): Failed writing to FileName: 'logs/nlog-all-2026-10-14.log' Exception: System.IO.IOException: The process cannot access the file 'C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\logs\nlog-all-2026-10-14.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Targets.FileTarget.CreateFileStream(String filePath, Int32 bufferSize)
+   at NLog.Targets.FileTarget.OpenNewFileStream(String filePath, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileTarget.CreateFileStreamWithDirectory(String filePath, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileTarget.CreateFileStreamWithRetry(IFileAppender fileAppender, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileAppenders.ExclusiveFileLockingAppender..ctor(FileTarget fileTarget, String filePath)
+   at NLog.Targets.FileTarget.CreateFileAppender(String filePath)
+   at NLog.Targets.FileTarget.OpenFile(String filename, LogEventInfo firstLogEvent, Nullable`1 previousFileLastModified, Int32 sequenceNumber)
+   at NLog.Targets.FileTarget.WriteBytesToFile(String filename, LogEventInfo firstLogEvent, MemoryStream ms)
+   at NLog.Targets.FileTarget.Write(LogEventInfo logEvent)
+2026-10-14 15:45:40.4357 Error FileTarget(Name=allfile): Failed writing to FileName: 'logs/nlog-all-2026-10-14.log' Exception: System.IO.IOException: The process cannot access the file 'C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\logs\nlog-all-2026-10-14.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Targets.FileTarget.CreateFileStream(String filePath, Int32 bufferSize)
+   at NLog.Targets.FileTarget.OpenNewFileStream(String filePath, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileTarget.CreateFileStreamWithDirectory(String filePath, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileTarget.CreateFileStreamWithRetry(IFileAppender fileAppender, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileAppenders.ExclusiveFileLockingAppender..ctor(FileTarget fileTarget, String filePath)
+   at NLog.Targets.FileTarget.CreateFileAppender(String filePath)
+   at NLog.Targets.FileTarget.OpenFile(String filename, LogEventInfo firstLogEvent, Nullable`1 previousFileLastModified, Int32 sequenceNumber)
+   at NLog.Targets.FileTarget.WriteBytesToFile(String filename, LogEventInfo firstLogEvent, MemoryStream ms)
+   at NLog.Targets.FileTarget.Write(LogEventInfo logEvent)
+2026-10-14 15:45:40.4357 Error FileTarget(Name=allfile): Failed writing to FileName: 'logs/nlog-all-2026-10-14.log' Exception: System.IO.IOException: The process cannot access the file 'C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\logs\nlog-all-2026-10-14.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Targets.FileTarget.CreateFileStream(String filePath, Int32 bufferSize)
+   at NLog.Targets.FileTarget.OpenNewFileStream(String filePath, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileTarget.CreateFileStreamWithDirectory(String filePath, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileTarget.CreateFileStreamWithRetry(IFileAppender fileAppender, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileAppenders.ExclusiveFileLockingAppender..ctor(FileTarget fileTarget, String filePath)
+   at NLog.Targets.FileTarget.CreateFileAppender(String filePath)
+   at NLog.Targets.FileTarget.OpenFile(String filename, LogEventInfo firstLogEvent, Nullable`1 previousFileLastModified, Int32 sequenceNumber)
+   at NLog.Targets.FileTarget.WriteBytesToFile(String filename, LogEventInfo firstLogEvent, MemoryStream ms)
+   at NLog.Targets.FileTarget.Write(LogEventInfo logEvent)
+2026-10-14 15:45:40.4357 Error FileTarget(Name=allfile): Failed writing to FileName: 'logs/nlog-all-2026-10-14.log' Exception: System.IO.IOException: The process cannot access the file 'C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\logs\nlog-all-2026-10-14.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Targets.FileTarget.CreateFileStream(String filePath, Int32 bufferSize)
+   at NLog.Targets.FileTarget.OpenNewFileStream(String filePath, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileTarget.CreateFileStreamWithDirectory(String filePath, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileTarget.CreateFileStreamWithRetry(IFileAppender fileAppender, Int32 bufferSize, Boolean initialFileOpen)
+   at NLog.Targets.FileAppenders.ExclusiveFileLockingAppender..ctor(FileTarget fileTarget, String filePath)
+   at NLog.Targets.FileTarget.CreateFileAppender(String filePath)
+   at NLog.Targets.FileTarget.OpenFile(String filename, LogEventInfo firstLogEvent, Nullable`1 previousFileLastModified, Int32 sequenceNumber)
+   at NLog.Targets.FileTarget.WriteBytesToFile(String filename, LogEventInfo firstLogEvent, MemoryStream ms)
+   at NLog.Targets.FileTarget.Write(LogEventInfo logEvent)
+2026-10-14 15:46:38.0378 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-14 15:46:38.0378 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.1.5860. Product version: 6.2.1+b058028290f245d12c30cb2910c2a574558ed9c6. GlobalAssemblyCache: False
+2026-10-14 15:46:38.0765 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\nlog.config
+2026-10-14 15:55:03.8895 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-14 15:55:03.9166 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.1.5860. Product version: 6.2.1+b058028290f245d12c30cb2910c2a574558ed9c6. GlobalAssemblyCache: False
+2026-10-14 15:55:04.0152 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\nlog.config
+2026-10-14 15:58:58.9335 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-14 15:58:59.0045 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.1.5860. Product version: 6.2.1+b058028290f245d12c30cb2910c2a574558ed9c6. GlobalAssemblyCache: False
+2026-10-14 15:58:59.2064 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\nlog.config
+2026-10-14 16:11:52.6506 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-14 16:11:52.6763 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.1.5860. Product version: 6.2.1+b058028290f245d12c30cb2910c2a574558ed9c6. GlobalAssemblyCache: False
+2026-10-14 16:11:52.7153 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\nlog.config
+2026-10-14 16:13:47.7876 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-14 16:13:47.8343 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.1.5860. Product version: 6.2.1+b058028290f245d12c30cb2910c2a574558ed9c6. GlobalAssemblyCache: False
+2026-10-14 16:13:47.9097 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\nlog.config
+2026-10-14 16:31:55.4734 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-14 16:31:55.5433 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.1.5860. Product version: 6.2.1+b058028290f245d12c30cb2910c2a574558ed9c6. GlobalAssemblyCache: False
+2026-10-14 16:31:55.6658 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\nlog.config
+2026-10-14 16:37:33.0442 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-14 16:37:33.0967 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.1.5860. Product version: 6.2.1+b058028290f245d12c30cb2910c2a574558ed9c6. GlobalAssemblyCache: False
+2026-10-14 16:37:33.2406 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\EquipmentLoanSystem\EquipmentLoanSystem.API\bin\Debug\net10.0\nlog.config
+2026-10-16 10:07:13.1726 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-16 10:07:13.2237 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.2.5975. Product version: 6.2.2+d9ebf823ee8ba54977c336709928a96ea58c6259. GlobalAssemblyCache: False
+2026-10-16 10:07:13.3400 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.API\nlog.config
+2026-10-16 10:12:01.9261 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-16 10:12:01.9662 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.2.5975. Product version: 6.2.2+d9ebf823ee8ba54977c336709928a96ea58c6259. GlobalAssemblyCache: False
+2026-10-16 10:12:02.0414 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.API\nlog.config
+2026-10-16 10:18:22.1171 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-16 10:18:22.1730 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.2.5975. Product version: 6.2.2+d9ebf823ee8ba54977c336709928a96ea58c6259. GlobalAssemblyCache: False
+2026-10-16 10:18:22.2342 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.API\nlog.config
+2026-10-16 10:26:13.6802 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-16 10:26:13.7295 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.2.5975. Product version: 6.2.2+d9ebf823ee8ba54977c336709928a96ea58c6259. GlobalAssemblyCache: False
+2026-10-16 10:26:13.7911 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.API\nlog.config
+2026-10-16 10:28:36.7657 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-10-16 10:28:36.8270 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.2.5975. Product version: 6.2.2+d9ebf823ee8ba54977c336709928a96ea58c6259. GlobalAssemblyCache: False
+2026-10-16 10:28:36.9204 Info Configuration initialized: TargetNames=allfile, ConfigItems=18, AutoReload=true, FilePath=C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.API\nlog.config

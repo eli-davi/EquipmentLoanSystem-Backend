@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="EquipmentLoanSystem.API/EquipmentLoanSystem.API.csproj" />
+  <Project Path="EquipmentLoanSystem.Core/EquipmentLoanSystem.Core.csproj" />
+  <Project Path="EquipmentLoanSystem.Data/EquipmentLoanSystem.Data.csproj" />
+  <Project Path="EquipmentLoanSystem.Service/EquipmentLoanSystem.Service.csproj" />
+  <Project Path="EquipmentLoanSystem.Tests/EquipmentLoanSystem.Tests.csproj" />
+</Solution>

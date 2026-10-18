@@ -1,0 +1,15 @@
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\bin\Debug\net10.0\EquipmentLoanSystem.Data.deps.json
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\bin\Debug\net10.0\EquipmentLoanSystem.Data.dll
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\bin\Debug\net10.0\EquipmentLoanSystem.Data.pdb
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\bin\Debug\net10.0\EquipmentLoanSystem.Core.dll
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\bin\Debug\net10.0\EquipmentLoanSystem.Core.pdb
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\obj\Debug\net10.0\EquipmentLoanSystem.Data.csproj.AssemblyReference.cache
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\obj\Debug\net10.0\EquipmentLoanSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\obj\Debug\net10.0\EquipmentLoanSystem.Data.AssemblyInfoInputs.cache
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\obj\Debug\net10.0\EquipmentLoanSystem.Data.AssemblyInfo.cs
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\obj\Debug\net10.0\EquipmentLoanSystem.Data.csproj.CoreCompileInputs.cache
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\obj\Debug\net10.0\Equipmen.441D85CC.Up2Date
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\obj\Debug\net10.0\EquipmentLoanSystem.Data.dll
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\obj\Debug\net10.0\refint\EquipmentLoanSystem.Data.dll
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\obj\Debug\net10.0\EquipmentLoanSystem.Data.pdb
+C:\Users\אלישבע\Desktop\EquipmentLoanSystem\EquipmentLoanSystem.Data\obj\Debug\net10.0\ref\EquipmentLoanSystem.Data.dll
